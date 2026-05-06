@@ -9,11 +9,11 @@
 body{
   margin:0;
   font-family:-apple-system,BlinkMacSystemFont,sans-serif;
-  background: radial-gradient(circle at top, #1b102a, #05070f 60%);
+  background: radial-gradient(circle at top, #1a102a, #05070f 60%);
   color:#e5e7eb;
 }
 
-/* LAYOUT */
+/* CONTAINER */
 .container{
   max-width:900px;
   margin:auto;
@@ -21,16 +21,11 @@ body{
 }
 
 /* HERO */
-.hero{
-  text-align:left;
-}
-
-h1{
-  font-size:56px;
+.hero h1{
+  font-size:58px;
   line-height:1.05;
   margin:0;
   font-weight:600;
-  letter-spacing:-0.5px;
 }
 
 .highlight{
@@ -43,11 +38,10 @@ h1{
   margin-top:25px;
   font-size:18px;
   color:#b6b6c7;
-  max-width:700px;
+  max-width:720px;
   line-height:1.7;
 }
 
-/* PROFILE */
 .profile{
   width:110px;
   height:110px;
@@ -55,30 +49,11 @@ h1{
   object-fit:cover;
   margin-bottom:30px;
   border:2px solid rgba(192,132,252,0.6);
-  box-shadow:0 0 30px rgba(192,132,252,0.15);
 }
 
-/* BUTTON */
-.btn{
-  display:inline-block;
-  margin-top:30px;
-  padding:12px 18px;
-  border-radius:999px;
-  background:linear-gradient(90deg,#c084fc,#60a5fa);
-  color:#0b0f1c;
-  text-decoration:none;
-  font-weight:600;
-  transition:0.3s;
-}
-
-.btn:hover{
-  transform:translateY(-2px);
-  opacity:0.9;
-}
-
-/* SECTIONS */
+/* SECTION */
 .section{
-  margin-top:90px;
+  margin-top:110px;
 }
 
 /* LABEL */
@@ -90,15 +65,15 @@ h1{
   margin-bottom:25px;
 }
 
-/* EXPERIENCE */
-.item{
-  margin-bottom:45px;
-  padding-left:14px;
+/* CARD STYLE */
+.card{
+  margin-bottom:40px;
+  padding-left:18px;
   border-left:2px solid rgba(192,132,252,0.4);
 }
 
 .title{
-  font-size:20px;
+  font-size:22px;
   font-weight:600;
 }
 
@@ -106,13 +81,26 @@ h1{
   margin-top:10px;
   color:#b6b6c7;
   line-height:1.7;
+  max-width:750px;
 }
 
-/* FADE IN EFFECT */
-.item, .section {
+/* BUTTON */
+.btn{
+  display:inline-block;
+  margin-top:35px;
+  padding:12px 18px;
+  border-radius:999px;
+  background:linear-gradient(90deg,#c084fc,#60a5fa);
+  color:#0b0f1c;
+  text-decoration:none;
+  font-weight:600;
+}
+
+/* ANIMATION */
+.fade{
   opacity:0;
-  transform:translateY(20px);
-  transition:all 0.8s ease;
+  transform:translateY(25px);
+  transition:all 0.9s ease;
 }
 </style>
 </head>
@@ -122,7 +110,7 @@ h1{
 <div class="container">
 
 <!-- HERO -->
-<div class="hero">
+<div class="hero fade">
   <img src="profile.jpg" class="profile">
 
   <h1>
@@ -131,47 +119,63 @@ h1{
   </h1>
 
   <p class="sub">
-    I operate at the intersection of luxury retail, e-commerce and customer experience —
-    creating seamless, high-impact journeys across physical and digital touchpoints for global brands.
+    I help global luxury brands connect physical retail with digital commerce —
+    designing seamless, high-conversion customer journeys built on experience, emotion and precision.
   </p>
 
   <a href="cv.pdf" class="btn" download>Download CV</a>
 </div>
 
+<!-- WHAT I DO -->
+<div class="section fade">
+<div class="label">What I do</div>
+
+<div class="card">
+<div class="title">Luxury Client Experience</div>
+<div class="desc">High-touch customer journeys that strengthen loyalty and brand perception in premium retail environments.</div>
+</div>
+
+<div class="card">
+<div class="title">E-commerce & CX Systems</div>
+<div class="desc">Supporting digital commerce operations, including Shopify workflows, QA processes and customer experience optimisation.</div>
+</div>
+
+<div class="card">
+<div class="title">Retail Performance</div>
+<div class="desc">Driving conversion, clienteling excellence and operational consistency in luxury store environments.</div>
+</div>
+
+</div>
+
 <!-- EXPERIENCE -->
-<div class="section">
+<div class="section fade">
 <div class="label">Selected Experience</div>
 
-<div class="item">
-<div class="title">Fiskars Group — Customer Experience & E-commerce</div>
-<div class="desc">
-Supported international customer operations and contributed to Shopify migration and digital CX workflows in a high-growth e-commerce environment.
-</div>
+<div class="card">
+<div class="title">Fiskars Group</div>
+<div class="desc">Worked on global customer operations and supported Shopify migration and CX workflow improvements.</div>
 </div>
 
-<div class="item">
-<div class="title">Christian Louboutin — Luxury Retail</div>
-<div class="desc">
-Delivered high-touch luxury client experiences and supported store operations, sales performance and premium brand execution.
-</div>
+<div class="card">
+<div class="title">Christian Louboutin</div>
+<div class="desc">Delivered luxury retail experience, supporting sales performance and high-end client engagement.</div>
 </div>
 
-<div class="item">
-<div class="title">Hermès — Client Experience</div>
-<div class="desc">
-Worked with high-value clienteling, CRM processes and luxury customer journey execution in one of the world’s most exclusive retail environments.
-</div>
+<div class="card">
+<div class="title">Hermès</div>
+<div class="desc">Worked with clienteling, CRM systems and luxury customer journeys in a high-end retail environment.</div>
 </div>
 
 </div>
 
 <!-- FOCUS -->
-<div class="section">
+<div class="section fade">
 <div class="label">Focus</div>
 
 <p class="sub">
-Bridging luxury retail and modern e-commerce — with a focus on customer experience, conversion and emotional brand value.
+I focus on bridging luxury retail and digital commerce — ensuring that customer experience remains consistent, emotional and high-converting across every touchpoint.
 </p>
+
 </div>
 
 </div>
@@ -186,7 +190,7 @@ const observer = new IntersectionObserver(entries=>{
   });
 });
 
-document.querySelectorAll('.item, .section').forEach(el=>{
+document.querySelectorAll('.fade').forEach(el=>{
   observer.observe(el);
 });
 </script>
