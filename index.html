@@ -8,17 +8,13 @@
 <style>
 body{
   margin:0;
-  font-family:-apple-system,BlinkMacSystemFont,sans-serif;
+  font-family: Georgia, serif;
   background: radial-gradient(circle at top, #1a1026, #05070f 60%);
   color:#e5e7eb;
 }
 
 /* LAYOUT */
-.container{
-  max-width:900px;
-  margin:auto;
-  padding:90px 20px;
-}
+..container { padding: 120px 20px; }
 
 /* HERO */
 .hero{
@@ -82,9 +78,8 @@ h1{
 }
 
 /* EXPERIENCE LIST */
-.item{
-  margin-bottom:35px;
-}
+.item { margin-bottom: 50px; }
+h1 { letter-spacing: -0.5px; }
 
 .title{
   font-size:20px;
@@ -106,7 +101,23 @@ h1{
 }
 </style>
 </head>
+<script>
+const observer = new IntersectionObserver((entries)=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      entry.target.style.opacity = 1;
+      entry.target.style.transform = "translateY(0)";
+    }
+  });
+});
 
+document.querySelectorAll('.item, .section').forEach(el=>{
+  el.style.opacity = 0;
+  el.style.transform = "translateY(20px)";
+  el.style.transition = "all 0.6s ease";
+  observer.observe(el);
+});
+</script>
 <body>
 
 <div class="container">
