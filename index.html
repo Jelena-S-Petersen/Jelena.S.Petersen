@@ -3,100 +3,65 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Jelena S. Petersen | CX & E-commerce</title>
+<title>Jelena S. Petersen</title>
 
 <style>
-:root{
-  --bg:#0a0f1c;
-  --card:#111a2e;
-  --accent:#60a5fa;
-  --accent2:#a78bfa;
-  --text:#e5e7eb;
-  --muted:#9ca3af;
-}
-
 body{
   margin:0;
-  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-  background: radial-gradient(circle at top, #111827, #050816);
-  color:var(--text);
+  font-family:-apple-system,BlinkMacSystemFont,sans-serif;
+  background:#0b1020;
+  color:#e5e7eb;
 }
 
 .container{
-  max-width:1000px;
+  max-width:900px;
   margin:auto;
-  padding:50px 20px;
+  padding:80px 20px;
 }
 
 /* HERO */
 .hero{
-  display:flex;
-  align-items:center;
-  gap:30px;
-  flex-wrap:wrap;
-}
-
-.profile{
-  width:180px;
-  height:180px;
-  border-radius:20px;
-  object-fit:cover;
-  border:2px solid rgba(96,165,250,0.6);
+  text-align:left;
 }
 
 h1{
-  font-size:40px;
+  font-size:48px;
   margin:0;
+  line-height:1.1;
 }
 
-.subtitle{
-  color:var(--muted);
-  margin-top:8px;
-  font-size:16px;
-  max-width:600px;
+.highlight{
+  background:linear-gradient(90deg,#60a5fa,#a78bfa);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
 }
 
-.badge{
-  display:inline-block;
-  margin-top:10px;
-  padding:6px 12px;
-  border-radius:999px;
-  background:rgba(167,139,250,0.15);
-  color:var(--accent2);
-  font-size:12px;
-}
-
-/* BUTTONS */
-.btn{
-  display:inline-block;
-  margin-top:15px;
-  padding:10px 16px;
-  border-radius:10px;
-  text-decoration:none;
-  font-weight:600;
-}
-
-.primary{
-  background:var(--accent);
-  color:#0a0f1c;
-}
-
-.secondary{
-  border:1px solid var(--accent);
-  color:var(--accent);
-  margin-left:10px;
+.sub{
+  margin-top:20px;
+  font-size:18px;
+  color:#9ca3af;
+  max-width:700px;
 }
 
 /* SECTIONS */
 .section{
-  margin-top:40px;
+  margin-top:60px;
 }
 
+.title{
+  font-size:14px;
+  letter-spacing:2px;
+  color:#60a5fa;
+  text-transform:uppercase;
+  margin-bottom:15px;
+}
+
+/* CARDS */
 .card{
-  background:var(--card);
+  background:#111827;
   padding:25px;
-  border-radius:16px;
-  margin-top:15px;
+  border-radius:14px;
+  margin-bottom:15px;
   border:1px solid rgba(255,255,255,0.05);
 }
 
@@ -109,29 +74,19 @@ h1{
 
 @media(max-width:800px){
   .grid{grid-template-columns:1fr;}
-  h1{font-size:30px;}
+  h1{font-size:34px;}
 }
 
-/* SKILLS BARS */
-.bar{
-  margin:8px 0;
-}
-
-.label{
-  font-size:13px;
-  color:var(--muted);
-}
-
-.progress{
-  height:6px;
-  background:#1f2937;
+/* BUTTON */
+.btn{
+  display:inline-block;
+  margin-top:25px;
+  padding:12px 18px;
   border-radius:10px;
-  overflow:hidden;
-}
-
-.fill{
-  height:100%;
-  background:linear-gradient(90deg,var(--accent),var(--accent2));
+  text-decoration:none;
+  font-weight:600;
+  background:linear-gradient(90deg,#60a5fa,#a78bfa);
+  color:#0b1020;
 }
 </style>
 </head>
@@ -142,82 +97,80 @@ h1{
 
 <!-- HERO -->
 <div class="hero">
-  <img src="profile.jpg" class="profile">
+  <h1>
+    I design <span class="highlight">high-end customer experiences</span><br>
+    across luxury retail & digital commerce.
+  </h1>
 
-  <div>
-    <h1>Jelena S. Petersen</h1>
-    <div class="badge">CX • Luxury Retail • E-commerce • Shopify</div>
+  <p class="sub">
+    I work at the intersection of luxury retail, e-commerce and customer experience — 
+    helping premium brands create seamless, high-conversion customer journeys both in-store and online.
+  </p>
 
-    <p class="subtitle">
-      I build seamless customer experiences across luxury retail and digital commerce,
-      combining operational excellence with modern e-commerce workflows.
-    </p>
+  <a href="cv.pdf" class="btn" download>Download CV</a>
+</div>
 
-    <a href="cv.pdf" class="btn primary" download>Download CV</a>
-    <a href="mailto:your@email.com" class="btn secondary">Contact</a>
-  </div>
+<!-- WHAT I DO -->
+<div class="section">
+<div class="title">What I do</div>
+
+<div class="grid">
+
+<div class="card">
+<strong>Luxury Client Experience</strong><br><br>
+Delivering premium, high-touch customer journeys in world-class retail environments.
+</div>
+
+<div class="card">
+<strong>E-commerce Operations</strong><br><br>
+Supporting digital commerce workflows, CX systems and platform transitions (Shopify).
+</div>
+
+<div class="card">
+<strong>Retail Performance</strong><br><br>
+Driving sales, conversion and operational excellence in luxury store environments.
+</div>
+
+<div class="card">
+<strong>Customer Journey Design</strong><br><br>
+Improving end-to-end customer experience across physical and digital touchpoints.
+</div>
+
+</div>
 </div>
 
 <!-- EXPERIENCE -->
 <div class="section">
-<h2>Experience</h2>
+<div class="title">Experience</div>
 
 <div class="card">
-<strong>Consumer Care Specialist – Fiskars Group</strong><br>
-<p class="subtitle">E-commerce & Customer Experience</p>
-<p>Supported EU/US customer operations and contributed to Shopify migration & QA workflows in a fast-scaling digital environment.</p>
-</div>
-
-<div class="card">
-<strong>Assistant Store Manager – Christian Louboutin</strong><br>
-<p class="subtitle">Luxury Retail & Sales Leadership</p>
-<p>Delivered high-touch client experience and supported store operations, KPIs, and premium brand standards.</p>
+<strong>Fiskars Group</strong><br>
+Consumer Care Specialist<br><br>
+Worked with international customer operations and supported e-commerce platform processes including Shopify migration and QA workflows.
 </div>
 
 <div class="card">
-<strong>Hermès – Client Experience & Retail</strong><br>
-<p class="subtitle">Luxury Clienteling & Operations</p>
-<p>Worked with client journeys, CRM processes, merchandising and high-end retail experience execution.</p>
-</div>
+<strong>Christian Louboutin</strong><br>
+Assistant Store Manager<br><br>
+Delivered luxury retail experience, supported store leadership, and contributed to sales performance and clienteling strategies.
 </div>
 
-<!-- SKILLS -->
+<div class="card">
+<strong>Hermès</strong><br>
+Retail & Client Experience<br><br>
+Worked with high-end clienteling, CRM processes and luxury customer journey execution.
+</div>
+
+</div>
+
+<!-- FINAL -->
 <div class="section">
-<h2>Skills</h2>
+<div class="title">Focus</div>
 
 <div class="card">
-
-<div class="bar">
-<div class="label">Customer Experience</div>
-<div class="progress"><div class="fill" style="width:95%"></div></div>
+I help premium brands bridge the gap between physical luxury retail and modern digital commerce — without losing the emotional value of the customer experience.
 </div>
 
-<div class="bar">
-<div class="label">Luxury Retail</div>
-<div class="progress"><div class="fill" style="width:90%"></div></div>
-</div>
-
-<div class="bar">
-<div class="label">E-commerce / Shopify</div>
-<div class="progress"><div class="fill" style="width:80%"></div></div>
-</div>
-
-<div class="bar">
-<div class="label">Clienteling & CRM</div>
-<div class="progress"><div class="fill" style="width:90%"></div></div>
-</div>
-
-</div>
-</div>
-
-<!-- EDUCATION -->
-<div class="section">
-<h2>Education</h2>
-
-<div class="card">
-IHM Business School – E-commerce Manager (2021–2023)<br><br>
-Folkuniversitetet – Design & Pattern Construction
-</div>
 </div>
 
 </div>
