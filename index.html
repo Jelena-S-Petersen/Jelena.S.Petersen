@@ -3,11 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Jelena S. Petersen</title>
+<title>Portfolio</title>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
 body{
@@ -17,20 +15,16 @@ body{
   color:#e5e7eb;
 }
 
-/* LAYOUT */
 .container{
-  max-width:850px;
+  max-width:900px;
   margin:auto;
-  padding:130px 20px;
+  padding:120px 20px;
 }
 
-/* HERO */
 .hero h1{
-  font-size:60px;
+  font-size:52px;
   line-height:1.05;
   margin:0;
-  font-weight:600;
-  letter-spacing:-1px;
 }
 
 .highlight{
@@ -40,85 +34,59 @@ body{
 }
 
 .sub{
-  margin-top:25px;
-  font-size:18px;
+  margin-top:20px;
   color:#b6b6c7;
   max-width:700px;
-  line-height:1.75;
+  line-height:1.7;
 }
 
 .profile{
-  width:110px;
-  height:110px;
+  width:100px;
+  height:100px;
   border-radius:50%;
-  object-fit:cover;
-  margin-bottom:30px;
+  margin-bottom:20px;
   border:2px solid rgba(192,132,252,0.6);
+  object-fit:cover;
 }
 
-/* BUTTON */
+.section{
+  margin-top:90px;
+}
+
+.label{
+  font-size:11px;
+  letter-spacing:3px;
+  color:#9ca3af;
+  text-transform:uppercase;
+  margin-bottom:20px;
+}
+
+.card{
+  padding:20px;
+  border-left:2px solid rgba(192,132,252,0.4);
+  margin-bottom:20px;
+  background:rgba(17,24,39,0.5);
+  border-radius:10px;
+}
+
+a{
+  color:#e5e7eb;
+  text-decoration:none;
+}
+
+a:hover{
+  color:#c084fc;
+}
+
 .btn{
   display:inline-block;
-  margin-top:30px;
+  margin-top:25px;
   padding:12px 18px;
   border-radius:999px;
   background:linear-gradient(90deg,#c084fc,#60a5fa);
   color:#0b0f1c;
   text-decoration:none;
   font-weight:600;
-  transition:0.3s;
-}
-
-.btn:hover{
-  transform:translateY(-2px);
-  opacity:0.9;
-}
-
-/* SECTIONS */
-.section{
-  margin-top:120px;
-}
-
-/* LABEL */
-.label{
-  font-size:11px;
-  letter-spacing:3px;
-  color:#9ca3af;
-  text-transform:uppercase;
-  margin-bottom:25px;
-}
-
-/* CARD */
-.card{
-  margin-bottom:45px;
-  padding-left:18px;
-  border-left:2px solid rgba(192,132,252,0.35);
-}
-
-/* TITLE */
-.title{
-  font-size:22px;
-  font-weight:600;
-}
-
-/* DESC */
-.desc{
-  margin-top:10px;
-  color:#b6b6c7;
-  line-height:1.75;
-  max-width:720px;
-}
-
-/* HOVER DETAIL */
-.card:hover .title{
-  color:#c084fc;
-  transition:0.3s;
-}
-
-/* FADE */
-.fade{
-  opacity:0;
-  transform:translateY(25px);
 }
 </style>
 </head>
@@ -127,98 +95,40 @@ body{
 
 <div class="container">
 
-<!-- HERO -->
-<div class="hero fade">
-  <img src="profile.jpg" class="profile">
+<div class="hero">
+<img src="profile.jpg" class="profile">
 
-  <h1>
-    I design <span class="highlight">premium customer experiences</span><br>
-    across luxury retail & digital commerce.
-  </h1>
-
-  <p class="sub">
-    CX & e-commerce specialist focused on bridging physical luxury retail with digital commerce —
-    creating seamless, emotionally driven customer journeys that improve conversion and brand experience.
-  </p>
-
-  <a href="cv.pdf" class="btn" download>Download CV</a>
-</div>
-
-<!-- WHAT I DO -->
-<div class="section fade">
-<div class="label">What I do</div>
-
-<div class="card">
-<div class="title">Luxury Client Experience</div>
-<div class="desc">Designing and delivering high-touch customer journeys that strengthen loyalty and brand perception in premium retail environments.</div>
-</div>
-
-<div class="card">
-<div class="title">E-commerce Operations</div>
-<div class="desc">Supporting Shopify-based workflows, customer service operations and digital CX optimisation across global markets.</div>
-</div>
-
-<div class="card">
-<div class="title">Retail Performance</div>
-<div class="desc">Improving conversion, clienteling execution and operational consistency in luxury retail environments.</div>
-</div>
-
-</div>
-
-<!-- EXPERIENCE -->
-<div class="section fade">
-<div class="label">Selected Experience</div>
-
-<div class="card">
-<div class="title">Fiskars Group</div>
-<div class="desc">
-Supported international CX operations and Shopify migration projects, improving digital customer workflows and service structure.
-</div>
-</div>
-
-<div class="card">
-<div class="title">Christian Louboutin</div>
-<div class="desc">
-Delivered luxury retail experience, supporting high-value client interactions and store performance in a premium fashion environment.
-</div>
-</div>
-
-<div class="card">
-<div class="title">Hermès</div>
-<div class="desc">
-Worked within luxury clienteling and CRM systems, contributing to high-end customer journeys and personalised retail experience.
-</div>
-</div>
-
-</div>
-
-<!-- FOCUS -->
-<div class="section fade">
-<div class="label">Focus</div>
+<h1>
+I design <span class="highlight">premium customer experiences</span><br>
+across luxury retail & digital commerce.
+</h1>
 
 <p class="sub">
-I focus on elevating customer experience across luxury retail and digital commerce — ensuring consistency, emotion and conversion across every touchpoint.
+CX & e-commerce specialist focused on luxury retail, customer experience and digital commerce operations.
 </p>
 
+<a href="cv.pdf" class="btn" download>Download CV</a>
+</div>
+
+<div class="section">
+
+<div class="label">Experience (click for details)</div>
+
+<div class="card">
+<a href="hermes.html">Hermès</a>
+</div>
+
+<div class="card">
+<a href="louboutin.html">Christian Louboutin</a>
+</div>
+
+<div class="card">
+<a href="fiskars.html">Fiskars Group</a>
 </div>
 
 </div>
 
-<script>
-const observer = new IntersectionObserver(entries=>{
-  entries.forEach(entry=>{
-    if(entry.isIntersecting){
-      entry.target.style.opacity = 1;
-      entry.target.style.transform = "translateY(0)";
-      entry.target.style.transition = "all 1s cubic-bezier(0.16, 1, 0.3, 1)";
-    }
-  });
-},{threshold:0.15});
-
-document.querySelectorAll('.fade').forEach(el=>{
-  observer.observe(el);
-});
-</script>
+</div>
 
 </body>
 </html>
