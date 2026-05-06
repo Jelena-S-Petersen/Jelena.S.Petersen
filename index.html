@@ -8,13 +8,17 @@
 <style>
 body{
   margin:0;
-  font-family: Georgia, serif;
-  background: radial-gradient(circle at top, #1a1026, #05070f 60%);
+  font-family:-apple-system,BlinkMacSystemFont,sans-serif;
+  background: radial-gradient(circle at top, #1b102a, #05070f 60%);
   color:#e5e7eb;
 }
 
 /* LAYOUT */
-..container { padding: 120px 20px; }
+.container{
+  max-width:900px;
+  margin:auto;
+  padding:120px 20px;
+}
 
 /* HERO */
 .hero{
@@ -22,10 +26,11 @@ body{
 }
 
 h1{
-  font-size:54px;
+  font-size:56px;
   line-height:1.05;
   margin:0;
   font-weight:600;
+  letter-spacing:-0.5px;
 }
 
 .highlight{
@@ -38,21 +43,22 @@ h1{
   margin-top:25px;
   font-size:18px;
   color:#b6b6c7;
-  max-width:650px;
-  line-height:1.6;
+  max-width:700px;
+  line-height:1.7;
 }
 
-/* PROFILE IMAGE */
+/* PROFILE */
 .profile{
-  width:120px;
-  height:120px;
+  width:110px;
+  height:110px;
   border-radius:50%;
   object-fit:cover;
-  margin-bottom:25px;
-  border:2px solid rgba(192,132,252,0.5);
+  margin-bottom:30px;
+  border:2px solid rgba(192,132,252,0.6);
+  box-shadow:0 0 30px rgba(192,132,252,0.15);
 }
 
-/* CTA */
+/* BUTTON */
 .btn{
   display:inline-block;
   margin-top:30px;
@@ -62,24 +68,34 @@ h1{
   color:#0b0f1c;
   text-decoration:none;
   font-weight:600;
+  transition:0.3s;
+}
+
+.btn:hover{
+  transform:translateY(-2px);
+  opacity:0.9;
 }
 
 /* SECTIONS */
 .section{
-  margin-top:80px;
+  margin-top:90px;
 }
 
+/* LABEL */
 .label{
-  font-size:12px;
+  font-size:11px;
   letter-spacing:3px;
   color:#9ca3af;
   text-transform:uppercase;
-  margin-bottom:20px;
+  margin-bottom:25px;
 }
 
-/* EXPERIENCE LIST */
-.item { margin-bottom: 50px; }
-h1 { letter-spacing: -0.5px; }
+/* EXPERIENCE */
+.item{
+  margin-bottom:45px;
+  padding-left:14px;
+  border-left:2px solid rgba(192,132,252,0.4);
+}
 
 .title{
   font-size:20px;
@@ -87,44 +103,27 @@ h1 { letter-spacing: -0.5px; }
 }
 
 .desc{
-  margin-top:8px;
+  margin-top:10px;
   color:#b6b6c7;
-  line-height:1.6;
+  line-height:1.7;
 }
 
-/* FLOAT ACCENT LINE */
-.line{
-  width:60px;
-  height:2px;
-  background:linear-gradient(90deg,#c084fc,#60a5fa);
-  margin:15px 0;
+/* FADE IN EFFECT */
+.item, .section {
+  opacity:0;
+  transform:translateY(20px);
+  transition:all 0.8s ease;
 }
 </style>
 </head>
-<script>
-const observer = new IntersectionObserver((entries)=>{
-  entries.forEach(entry=>{
-    if(entry.isIntersecting){
-      entry.target.style.opacity = 1;
-      entry.target.style.transform = "translateY(0)";
-    }
-  });
-});
 
-document.querySelectorAll('.item, .section').forEach(el=>{
-  el.style.opacity = 0;
-  el.style.transform = "translateY(20px)";
-  el.style.transition = "all 0.6s ease";
-  observer.observe(el);
-});
-</script>
 <body>
 
 <div class="container">
 
 <!-- HERO -->
 <div class="hero">
-  <img src="profile.jpg">
+  <img src="profile.jpg" class="profile">
 
   <h1>
     I design <span class="highlight">premium customer experiences</span><br>
@@ -132,8 +131,8 @@ document.querySelectorAll('.item, .section').forEach(el=>{
   </h1>
 
   <p class="sub">
-    I work at the intersection of luxury retail, e-commerce and customer experience —
-    helping high-end brands create seamless, emotionally driven customer journeys across physical and digital touchpoints.
+    I operate at the intersection of luxury retail, e-commerce and customer experience —
+    creating seamless, high-impact journeys across physical and digital touchpoints for global brands.
   </p>
 
   <a href="cv.pdf" class="btn" download>Download CV</a>
@@ -141,29 +140,26 @@ document.querySelectorAll('.item, .section').forEach(el=>{
 
 <!-- EXPERIENCE -->
 <div class="section">
-<div class="label">Experience</div>
+<div class="label">Selected Experience</div>
 
 <div class="item">
 <div class="title">Fiskars Group — Customer Experience & E-commerce</div>
-<div class="line"></div>
 <div class="desc">
-Supported global customer operations and contributed to Shopify migration and digital CX workflows in a fast-scaling e-commerce environment.
+Supported international customer operations and contributed to Shopify migration and digital CX workflows in a high-growth e-commerce environment.
 </div>
 </div>
 
 <div class="item">
 <div class="title">Christian Louboutin — Luxury Retail</div>
-<div class="line"></div>
 <div class="desc">
-Delivered high-touch luxury client experience and supported store operations, sales performance and premium brand standards.
+Delivered high-touch luxury client experiences and supported store operations, sales performance and premium brand execution.
 </div>
 </div>
 
 <div class="item">
 <div class="title">Hermès — Client Experience</div>
-<div class="line"></div>
 <div class="desc">
-Worked with high-value clienteling, CRM processes and luxury customer journey execution in a world-class retail environment.
+Worked with high-value clienteling, CRM processes and luxury customer journey execution in one of the world’s most exclusive retail environments.
 </div>
 </div>
 
@@ -174,11 +170,26 @@ Worked with high-value clienteling, CRM processes and luxury customer journey ex
 <div class="label">Focus</div>
 
 <p class="sub">
-Bridging the gap between luxury retail and modern e-commerce — without losing the emotional value of the customer experience.
+Bridging luxury retail and modern e-commerce — with a focus on customer experience, conversion and emotional brand value.
 </p>
 </div>
 
 </div>
+
+<script>
+const observer = new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      entry.target.style.opacity = 1;
+      entry.target.style.transform = "translateY(0)";
+    }
+  });
+});
+
+document.querySelectorAll('.item, .section').forEach(el=>{
+  observer.observe(el);
+});
+</script>
 
 </body>
 </html>
