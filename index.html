@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Luxury CX Portfolio</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
 body{
@@ -39,7 +39,7 @@ h1{
 .sub{
   margin-top:20px;
   color:#b6b6c7;
-  max-width:750px;
+  max-width:720px;
   line-height:1.7;
 }
 
@@ -53,7 +53,25 @@ h1{
   border:2px solid rgba(192,132,252,0.6);
 }
 
-/* SECTION LABEL */
+/* BUTTON */
+.btn{
+  display:inline-block;
+  margin-top:25px;
+  padding:12px 18px;
+  border-radius:999px;
+  background:linear-gradient(90deg,#c084fc,#60a5fa);
+  color:#0b0f1c;
+  text-decoration:none;
+  font-weight:600;
+  transition:0.3s;
+}
+
+.btn:hover{
+  transform:translateY(-2px);
+  opacity:0.9;
+}
+
+/* LABEL */
 .label{
   font-size:11px;
   letter-spacing:3px;
@@ -62,15 +80,15 @@ h1{
   margin:80px 0 20px;
 }
 
-/* CARDS */
+/* CARD */
 .card{
-  padding:22px;
-  border-left:2px solid rgba(192,132,252,0.35);
+  padding:20px;
+  border-left:2px solid rgba(192,132,252,0.4);
   margin-bottom:18px;
   background:rgba(17,24,39,0.5);
   border-radius:10px;
   cursor:pointer;
-  transition:0.3s ease;
+  transition:0.3s;
 }
 
 .card:hover{
@@ -86,7 +104,7 @@ h1{
   width:100%;
   height:100%;
   background:rgba(0,0,0,0.7);
-  backdrop-filter: blur(12px);
+  backdrop-filter: blur(10px);
   justify-content:center;
   align-items:center;
 }
@@ -123,24 +141,6 @@ ul{
   color:#b6b6c7;
   line-height:1.8;
 }
-
-/* FADE */
-.hero, .card{
-  opacity:0;
-  transform:translateY(20px);
-  animation:fadeIn 0.8s ease forwards;
-}
-
-.card:nth-child(2){animation-delay:0.1s;}
-.card:nth-child(3){animation-delay:0.2s;}
-.card:nth-child(4){animation-delay:0.3s;}
-
-@keyframes fadeIn{
-  to{
-    opacity:1;
-    transform:translateY(0);
-  }
-}
 </style>
 </head>
 
@@ -158,31 +158,22 @@ Luxury <span class="highlight">Customer Experience</span><br>
 </h1>
 
 <p class="sub">
-I specialize in luxury retail and digital commerce, focusing on customer experience, clienteling, and e-commerce operations. 
-I bridge in-store luxury experiences with digital customer journeys to improve consistency, engagement, and conversion.
+CX & e-commerce specialist focused on luxury retail, digital commerce and customer experience operations.
 </p>
+
+<!-- ✔️ DOWNLOAD BUTTON (FIXAD) -->
+<a href="cv.pdf" class="btn" download>Download CV</a>
 </div>
 
-<!-- CORE SKILLS -->
-<div class="label">Core strengths</div>
+<!-- CORE -->
+<div class="label">Core expertise</div>
 
-<div class="card">
-<strong>Luxury Customer Experience</strong><br>
-Delivering high-touch client journeys that strengthen loyalty and brand perception.
-</div>
-
-<div class="card">
-<strong>E-commerce Operations</strong><br>
-Supporting Shopify workflows, CX improvements, and digital service processes.
-</div>
-
-<div class="card">
-<strong>Retail Performance</strong><br>
-Improving conversion, clienteling execution, and store-level customer experience.
-</div>
+<div class="card">Luxury Customer Experience</div>
+<div class="card">E-commerce Operations</div>
+<div class="card">Retail Performance</div>
 
 <!-- EXPERIENCE -->
-<div class="label">Experience (click for details)</div>
+<div class="label">Experience (click)</div>
 
 <div class="card" onclick="openModal('hermes')">Hermès</div>
 <div class="card" onclick="openModal('louboutin')">Christian Louboutin</div>
@@ -192,10 +183,10 @@ Improving conversion, clienteling execution, and store-level customer experience
 
 <!-- MODAL -->
 <div id="modal" class="modal" onclick="closeModal(event)">
-<div class="modal-content">
-<span class="close" onclick="closeModal()">&times;</span>
-<div id="content"></div>
-</div>
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <div id="content"></div>
+  </div>
 </div>
 
 <script>
@@ -206,57 +197,33 @@ let content = "";
 if(type === "hermes"){
 content = `
 <h2>Hermès</h2>
-
-<h3>Overview</h3>
+<h3>Experience</h3>
 <ul>
 <li>Luxury client experience in high-end retail environment</li>
-<li>Delivered personalized service for VIP clients</li>
-<li>Maintained strict luxury brand standards</li>
-</ul>
-
-<h3>Skills Applied</h3>
-<ul>
-<li>Clienteling & relationship building</li>
-<li>CRM systems</li>
-<li>Luxury retail communication</li>
+<li>VIP client journeys and personalized service</li>
+<li>CRM and clienteling systems</li>
 </ul>`;
 }
 
 if(type === "louboutin"){
 content = `
 <h2>Christian Louboutin</h2>
-
-<h3>Overview</h3>
+<h3>Experience</h3>
 <ul>
-<li>Luxury retail sales and customer experience</li>
-<li>Supported store performance and client engagement</li>
-<li>High-end brand interaction</li>
-</ul>
-
-<h3>Skills Applied</h3>
-<ul>
-<li>Luxury retail operations</li>
-<li>Sales & customer experience</li>
-<li>Client service excellence</li>
+<li>Luxury retail sales & customer experience</li>
+<li>Store operations support</li>
+<li>Client engagement</li>
 </ul>`;
 }
 
 if(type === "fiskars"){
 content = `
 <h2>Fiskars Group</h2>
-
-<h3>Overview</h3>
+<h3>Experience</h3>
 <ul>
-<li>E-commerce & customer experience operations</li>
-<li>Supported Shopify migration and CX workflows</li>
-<li>Improved digital customer journey consistency</li>
-</ul>
-
-<h3>Skills Applied</h3>
-<ul>
-<li>E-commerce systems</li>
-<li>Shopify</li>
-<li>Customer journey optimisation</li>
+<li>E-commerce & CX operations</li>
+<li>Shopify workflow support</li>
+<li>Customer journey optimization</li>
 </ul>`;
 }
 
