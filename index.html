@@ -3,13 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Jelena S. Petersen | CV</title>
+<title>Jelena S. Petersen | CX & E-commerce</title>
 
 <style>
 :root{
-  --bg:#0b0f19;
-  --card:#121826;
-  --accent:#8b5cf6;
+  --bg:#0a0f1c;
+  --card:#111a2e;
+  --accent:#60a5fa;
+  --accent2:#a78bfa;
   --text:#e5e7eb;
   --muted:#9ca3af;
 }
@@ -17,53 +18,89 @@
 body{
   margin:0;
   font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-  background: radial-gradient(circle at top, #111827, #05070f);
+  background: radial-gradient(circle at top, #111827, #050816);
   color:var(--text);
 }
 
 .container{
   max-width:1000px;
   margin:auto;
-  padding:40px 20px;
+  padding:50px 20px;
 }
 
-.header{
-  text-align:center;
+/* HERO */
+.hero{
+  display:flex;
+  align-items:center;
+  gap:30px;
+  flex-wrap:wrap;
 }
 
 .profile{
-  width:160px;
-  height:160px;
-  border-radius:50%;
+  width:180px;
+  height:180px;
+  border-radius:20px;
   object-fit:cover;
-  border:3px solid var(--accent);
-  box-shadow:0 0 40px rgba(139,92,246,0.3);
+  border:2px solid rgba(96,165,250,0.6);
 }
 
 h1{
-  margin:15px 0 5px;
-  font-size:34px;
+  font-size:40px;
+  margin:0;
 }
 
 .subtitle{
   color:var(--muted);
+  margin-top:8px;
+  font-size:16px;
+  max-width:600px;
 }
 
+.badge{
+  display:inline-block;
+  margin-top:10px;
+  padding:6px 12px;
+  border-radius:999px;
+  background:rgba(167,139,250,0.15);
+  color:var(--accent2);
+  font-size:12px;
+}
+
+/* BUTTONS */
+.btn{
+  display:inline-block;
+  margin-top:15px;
+  padding:10px 16px;
+  border-radius:10px;
+  text-decoration:none;
+  font-weight:600;
+}
+
+.primary{
+  background:var(--accent);
+  color:#0a0f1c;
+}
+
+.secondary{
+  border:1px solid var(--accent);
+  color:var(--accent);
+  margin-left:10px;
+}
+
+/* SECTIONS */
 .section{
+  margin-top:40px;
+}
+
+.card{
   background:var(--card);
-  padding:22px;
-  border-radius:14px;
-  margin-top:20px;
+  padding:25px;
+  border-radius:16px;
+  margin-top:15px;
   border:1px solid rgba(255,255,255,0.05);
 }
 
-h2{
-  color:var(--accent);
-  margin-bottom:10px;
-  font-size:18px;
-  letter-spacing:0.5px;
-}
-
+/* GRID */
 .grid{
   display:grid;
   grid-template-columns:1fr 1fr;
@@ -72,38 +109,30 @@ h2{
 
 @media(max-width:800px){
   .grid{grid-template-columns:1fr;}
+  h1{font-size:30px;}
 }
 
-.btn{
-  display:inline-block;
-  padding:10px 16px;
-  border-radius:8px;
-  text-decoration:none;
-  font-weight:600;
-  margin:5px;
+/* SKILLS BARS */
+.bar{
+  margin:8px 0;
 }
 
-.btn-primary{
-  background:var(--accent);
-  color:#0b0f19;
-}
-
-.btn-outline{
-  border:1px solid var(--accent);
-  color:var(--accent);
-}
-
-.lang button{
-  background:none;
-  border:1px solid var(--muted);
+.label{
+  font-size:13px;
   color:var(--muted);
-  padding:5px 10px;
-  margin:5px;
-  border-radius:6px;
-  cursor:pointer;
 }
 
-.hidden{display:none;}
+.progress{
+  height:6px;
+  background:#1f2937;
+  border-radius:10px;
+  overflow:hidden;
+}
+
+.fill{
+  height:100%;
+  background:linear-gradient(90deg,var(--accent),var(--accent2));
+}
 </style>
 </head>
 
@@ -111,105 +140,87 @@ h2{
 
 <div class="container">
 
-<!-- HEADER -->
-<div class="header">
+<!-- HERO -->
+<div class="hero">
   <img src="profile.jpg" class="profile">
-  <h1>Jelena S. Petersen</h1>
-  <p class="subtitle">Retail • E-commerce • Customer Experience • Luxury Brands</p>
 
-  <div class="lang">
-    <button onclick="setLang('en')">EN</button>
-    <button onclick="setLang('sv')">SV</button>
+  <div>
+    <h1>Jelena S. Petersen</h1>
+    <div class="badge">CX • Luxury Retail • E-commerce • Shopify</div>
+
+    <p class="subtitle">
+      I build seamless customer experiences across luxury retail and digital commerce,
+      combining operational excellence with modern e-commerce workflows.
+    </p>
+
+    <a href="cv.pdf" class="btn primary" download>Download CV</a>
+    <a href="mailto:your@email.com" class="btn secondary">Contact</a>
   </div>
-
-  <a href="cv.pdf" class="btn btn-primary" download>Download CV</a>
-  <a href="mailto:your@email.com" class="btn btn-outline">Contact</a>
-</div>
-
-<!-- ABOUT -->
-<div class="section">
-<h2>PROFESSIONAL PROFILE</h2>
-
-<p id="en-about">
-Results-driven retail and e-commerce professional with international experience across luxury brands and global markets.
-Strong expertise in customer experience, operations, and digital transformation. Known for delivering premium service, driving performance, and building strong customer relationships.
-</p>
-
-<p id="sv-about" class="hidden">
-Resultatinriktad retail- och e-handelsprofil med internationell erfarenhet från lyxvarumärken och globala marknader.
-Stark kompetens inom kundupplevelse, drift och digital utveckling med fokus på premiumservice och resultat.
-</p>
 </div>
 
 <!-- EXPERIENCE -->
 <div class="section">
-<h2>PROFESSIONAL EXPERIENCE</h2>
+<h2>Experience</h2>
 
-<div id="en-exp">
+<div class="card">
 <strong>Consumer Care Specialist – Fiskars Group</strong><br>
-• Managed premium customer care across EU & US markets<br>
-• Supported Shopify migration and QA processes<br><br>
-
-<strong>Assistant Store Manager – Christian Louboutin</strong><br>
-• Delivered luxury customer experience and sales excellence<br>
-• Led store operations and KPI performance<br><br>
-
-<strong>Hermès – Store & CX Roles</strong><br>
-• Clienteling, merchandising & operations<br>
-• Customer journey optimization & CRM support
+<p class="subtitle">E-commerce & Customer Experience</p>
+<p>Supported EU/US customer operations and contributed to Shopify migration & QA workflows in a fast-scaling digital environment.</p>
 </div>
 
-<div id="sv-exp" class="hidden">
-<strong>Kundservice Specialist – Fiskars Group</strong><br>
-• Hanterade premium kundservice för EU & USA<br>
-• Stöttade Shopify-migrering och QA<br><br>
+<div class="card">
+<strong>Assistant Store Manager – Christian Louboutin</strong><br>
+<p class="subtitle">Luxury Retail & Sales Leadership</p>
+<p>Delivered high-touch client experience and supported store operations, KPIs, and premium brand standards.</p>
+</div>
 
-<strong>Assisterande Butikschef – Christian Louboutin</strong><br>
-• Levererade lyxig kundupplevelse och försäljning<br>
-• Ledde butikens drift och resultat<br><br>
-
-<strong>Hermès – Butik & kundupplevelse</strong><br>
-• Clienteling, merchandising och kundresor<br>
-• CRM och operativt stöd
+<div class="card">
+<strong>Hermès – Client Experience & Retail</strong><br>
+<p class="subtitle">Luxury Clienteling & Operations</p>
+<p>Worked with client journeys, CRM processes, merchandising and high-end retail experience execution.</p>
 </div>
 </div>
 
 <!-- SKILLS -->
 <div class="section">
-<h2>SKILLS</h2>
+<h2>Skills</h2>
 
-<div class="grid">
-<div>
-Customer Experience<br>
-Retail & Luxury Sales<br>
-CRM & Clienteling<br>
+<div class="card">
+
+<div class="bar">
+<div class="label">Customer Experience</div>
+<div class="progress"><div class="fill" style="width:95%"></div></div>
 </div>
 
-<div>
-E-commerce (Shopify)<br>
-Operations Management<br>
-Team Leadership<br>
+<div class="bar">
+<div class="label">Luxury Retail</div>
+<div class="progress"><div class="fill" style="width:90%"></div></div>
 </div>
+
+<div class="bar">
+<div class="label">E-commerce / Shopify</div>
+<div class="progress"><div class="fill" style="width:80%"></div></div>
+</div>
+
+<div class="bar">
+<div class="label">Clienteling & CRM</div>
+<div class="progress"><div class="fill" style="width:90%"></div></div>
+</div>
+
 </div>
 </div>
 
 <!-- EDUCATION -->
 <div class="section">
-<h2>EDUCATION</h2>
-<p>IHM Business School – E-commerce Manager (2021–2023)</p>
-<p>Lunds Folkuniversitet – Design & Pattern Construction</p>
+<h2>Education</h2>
+
+<div class="card">
+IHM Business School – E-commerce Manager (2021–2023)<br><br>
+Folkuniversitetet – Design & Pattern Construction
+</div>
 </div>
 
 </div>
-
-<script>
-function setLang(lang){
-  document.querySelectorAll('[id^="en-"]').forEach(e=>e.classList.add('hidden'));
-  document.querySelectorAll('[id^="sv-"]').forEach(e=>e.classList.add('hidden'));
-
-  document.querySelectorAll('[id^="'+lang+'-"]').forEach(e=>e.classList.remove('hidden'));
-}
-</script>
 
 </body>
 </html>
