@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Jelena S. Petersen</title>
 
-<!-- FONT -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -18,16 +17,16 @@ body{
   color:#e5e7eb;
 }
 
-/* CONTAINER */
+/* LAYOUT */
 .container{
-  max-width:900px;
+  max-width:850px;
   margin:auto;
-  padding:120px 20px;
+  padding:130px 20px;
 }
 
 /* HERO */
 .hero h1{
-  font-size:58px;
+  font-size:60px;
   line-height:1.05;
   margin:0;
   font-weight:600;
@@ -44,8 +43,8 @@ body{
   margin-top:25px;
   font-size:18px;
   color:#b6b6c7;
-  max-width:720px;
-  line-height:1.7;
+  max-width:700px;
+  line-height:1.75;
 }
 
 .profile{
@@ -77,7 +76,7 @@ body{
 
 /* SECTIONS */
 .section{
-  margin-top:110px;
+  margin-top:120px;
 }
 
 /* LABEL */
@@ -89,39 +88,37 @@ body{
   margin-bottom:25px;
 }
 
-/* CARDS */
+/* CARD */
 .card{
-  margin-bottom:40px;
-  padding:22px;
-  border-left:2px solid rgba(192,132,252,0.4);
-  background: rgba(17, 24, 39, 0.6);
-  border-radius:10px;
-  backdrop-filter: blur(10px);
-  transition: all 0.3s ease;
-  border:1px solid rgba(255,255,255,0.05);
+  margin-bottom:45px;
+  padding-left:18px;
+  border-left:2px solid rgba(192,132,252,0.35);
 }
 
-.card:hover{
-  transform:translateY(-4px);
-  border:1px solid rgba(192,132,252,0.5);
-}
-
+/* TITLE */
 .title{
-  font-size:20px;
+  font-size:22px;
   font-weight:600;
 }
 
+/* DESC */
 .desc{
   margin-top:10px;
   color:#b6b6c7;
-  line-height:1.7;
-  max-width:750px;
+  line-height:1.75;
+  max-width:720px;
+}
+
+/* HOVER DETAIL */
+.card:hover .title{
+  color:#c084fc;
+  transition:0.3s;
 }
 
 /* FADE */
 .fade{
   opacity:0;
-  transform:translateY(30px);
+  transform:translateY(25px);
 }
 </style>
 </head>
@@ -140,8 +137,8 @@ body{
   </h1>
 
   <p class="sub">
-    I work at the intersection of luxury retail, e-commerce and customer experience —
-    building seamless, high-impact journeys across physical and digital touchpoints.
+    CX & e-commerce specialist focused on bridging physical luxury retail with digital commerce —
+    creating seamless, emotionally driven customer journeys that improve conversion and brand experience.
   </p>
 
   <a href="cv.pdf" class="btn" download>Download CV</a>
@@ -153,17 +150,17 @@ body{
 
 <div class="card">
 <div class="title">Luxury Client Experience</div>
-<div class="desc">High-touch customer journeys that elevate brand perception and loyalty in premium retail environments.</div>
+<div class="desc">Designing and delivering high-touch customer journeys that strengthen loyalty and brand perception in premium retail environments.</div>
 </div>
 
 <div class="card">
-<div class="title">E-commerce & CX Systems</div>
-<div class="desc">Supporting digital commerce workflows including Shopify operations, QA and customer journey optimisation.</div>
+<div class="title">E-commerce Operations</div>
+<div class="desc">Supporting Shopify-based workflows, customer service operations and digital CX optimisation across global markets.</div>
 </div>
 
 <div class="card">
 <div class="title">Retail Performance</div>
-<div class="desc">Driving conversion, clienteling excellence and operational consistency in luxury store environments.</div>
+<div class="desc">Improving conversion, clienteling execution and operational consistency in luxury retail environments.</div>
 </div>
 
 </div>
@@ -174,17 +171,23 @@ body{
 
 <div class="card">
 <div class="title">Fiskars Group</div>
-<div class="desc">Customer Experience & E-commerce — supported Shopify migration and global CX operations.</div>
+<div class="desc">
+Supported international CX operations and Shopify migration projects, improving digital customer workflows and service structure.
+</div>
 </div>
 
 <div class="card">
 <div class="title">Christian Louboutin</div>
-<div class="desc">Luxury Retail — delivered high-end client experience and supported sales performance.</div>
+<div class="desc">
+Delivered luxury retail experience, supporting high-value client interactions and store performance in a premium fashion environment.
+</div>
 </div>
 
 <div class="card">
 <div class="title">Hermès</div>
-<div class="desc">Client Experience — worked with luxury clienteling, CRM systems and premium customer journeys.</div>
+<div class="desc">
+Worked within luxury clienteling and CRM systems, contributing to high-end customer journeys and personalised retail experience.
+</div>
 </div>
 
 </div>
@@ -194,14 +197,13 @@ body{
 <div class="label">Focus</div>
 
 <p class="sub">
-Bridging luxury retail and modern e-commerce with a focus on emotional customer experience, conversion and brand consistency.
+I focus on elevating customer experience across luxury retail and digital commerce — ensuring consistency, emotion and conversion across every touchpoint.
 </p>
 
 </div>
 
 </div>
 
-<!-- ANIMATION -->
 <script>
 const observer = new IntersectionObserver(entries=>{
   entries.forEach(entry=>{
