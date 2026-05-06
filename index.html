@@ -9,14 +9,15 @@
 body{
   margin:0;
   font-family:-apple-system,BlinkMacSystemFont,sans-serif;
-  background:#0b1020;
+  background: radial-gradient(circle at top, #1a1026, #05070f 60%);
   color:#e5e7eb;
 }
 
+/* LAYOUT */
 .container{
   max-width:900px;
   margin:auto;
-  padding:80px 20px;
+  padding:90px 20px;
 }
 
 /* HERO */
@@ -25,68 +26,83 @@ body{
 }
 
 h1{
-  font-size:48px;
+  font-size:54px;
+  line-height:1.05;
   margin:0;
-  line-height:1.1;
+  font-weight:600;
 }
 
 .highlight{
-  background:linear-gradient(90deg,#60a5fa,#a78bfa);
+  background:linear-gradient(90deg,#c084fc,#60a5fa,#f472b6);
   -webkit-background-clip:text;
   -webkit-text-fill-color:transparent;
 }
 
 .sub{
-  margin-top:20px;
+  margin-top:25px;
   font-size:18px;
-  color:#9ca3af;
-  max-width:700px;
+  color:#b6b6c7;
+  max-width:650px;
+  line-height:1.6;
+}
+
+/* PROFILE IMAGE */
+.profile{
+  width:120px;
+  height:120px;
+  border-radius:50%;
+  object-fit:cover;
+  margin-bottom:25px;
+  border:2px solid rgba(192,132,252,0.5);
+}
+
+/* CTA */
+.btn{
+  display:inline-block;
+  margin-top:30px;
+  padding:12px 18px;
+  border-radius:999px;
+  background:linear-gradient(90deg,#c084fc,#60a5fa);
+  color:#0b0f1c;
+  text-decoration:none;
+  font-weight:600;
 }
 
 /* SECTIONS */
 .section{
-  margin-top:60px;
+  margin-top:80px;
+}
+
+.label{
+  font-size:12px;
+  letter-spacing:3px;
+  color:#9ca3af;
+  text-transform:uppercase;
+  margin-bottom:20px;
+}
+
+/* EXPERIENCE LIST */
+.item{
+  margin-bottom:35px;
 }
 
 .title{
-  font-size:14px;
-  letter-spacing:2px;
-  color:#60a5fa;
-  text-transform:uppercase;
-  margin-bottom:15px;
-}
-
-/* CARDS */
-.card{
-  background:#111827;
-  padding:25px;
-  border-radius:14px;
-  margin-bottom:15px;
-  border:1px solid rgba(255,255,255,0.05);
-}
-
-/* GRID */
-.grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:15px;
-}
-
-@media(max-width:800px){
-  .grid{grid-template-columns:1fr;}
-  h1{font-size:34px;}
-}
-
-/* BUTTON */
-.btn{
-  display:inline-block;
-  margin-top:25px;
-  padding:12px 18px;
-  border-radius:10px;
-  text-decoration:none;
+  font-size:20px;
   font-weight:600;
-  background:linear-gradient(90deg,#60a5fa,#a78bfa);
-  color:#0b1020;
+}
+
+.desc{
+  margin-top:8px;
+  color:#b6b6c7;
+  line-height:1.6;
+}
+
+/* FLOAT ACCENT LINE */
+.line{
+  width:60px;
+  height:2px;
+  background:linear-gradient(90deg,#c084fc,#60a5fa);
+  margin:15px 0;
 }
 </style>
 </head>
@@ -97,80 +113,58 @@ h1{
 
 <!-- HERO -->
 <div class="hero">
+  <img src="profile.jpg" class="profile">
+
   <h1>
-    I design <span class="highlight">high-end customer experiences</span><br>
+    I design <span class="highlight">premium customer experiences</span><br>
     across luxury retail & digital commerce.
   </h1>
 
   <p class="sub">
-    I work at the intersection of luxury retail, e-commerce and customer experience — 
-    helping premium brands create seamless, high-conversion customer journeys both in-store and online.
+    I work at the intersection of luxury retail, e-commerce and customer experience —
+    helping high-end brands create seamless, emotionally driven customer journeys across physical and digital touchpoints.
   </p>
 
   <a href="cv.pdf" class="btn" download>Download CV</a>
 </div>
 
-<!-- WHAT I DO -->
-<div class="section">
-<div class="title">What I do</div>
-
-<div class="grid">
-
-<div class="card">
-<strong>Luxury Client Experience</strong><br><br>
-Delivering premium, high-touch customer journeys in world-class retail environments.
-</div>
-
-<div class="card">
-<strong>E-commerce Operations</strong><br><br>
-Supporting digital commerce workflows, CX systems and platform transitions (Shopify).
-</div>
-
-<div class="card">
-<strong>Retail Performance</strong><br><br>
-Driving sales, conversion and operational excellence in luxury store environments.
-</div>
-
-<div class="card">
-<strong>Customer Journey Design</strong><br><br>
-Improving end-to-end customer experience across physical and digital touchpoints.
-</div>
-
-</div>
-</div>
-
 <!-- EXPERIENCE -->
 <div class="section">
-<div class="title">Experience</div>
+<div class="label">Experience</div>
 
-<div class="card">
-<strong>Fiskars Group</strong><br>
-Consumer Care Specialist<br><br>
-Worked with international customer operations and supported e-commerce platform processes including Shopify migration and QA workflows.
+<div class="item">
+<div class="title">Fiskars Group — Customer Experience & E-commerce</div>
+<div class="line"></div>
+<div class="desc">
+Supported global customer operations and contributed to Shopify migration and digital CX workflows in a fast-scaling e-commerce environment.
+</div>
 </div>
 
-<div class="card">
-<strong>Christian Louboutin</strong><br>
-Assistant Store Manager<br><br>
-Delivered luxury retail experience, supported store leadership, and contributed to sales performance and clienteling strategies.
+<div class="item">
+<div class="title">Christian Louboutin — Luxury Retail</div>
+<div class="line"></div>
+<div class="desc">
+Delivered high-touch luxury client experience and supported store operations, sales performance and premium brand standards.
+</div>
 </div>
 
-<div class="card">
-<strong>Hermès</strong><br>
-Retail & Client Experience<br><br>
-Worked with high-end clienteling, CRM processes and luxury customer journey execution.
+<div class="item">
+<div class="title">Hermès — Client Experience</div>
+<div class="line"></div>
+<div class="desc">
+Worked with high-value clienteling, CRM processes and luxury customer journey execution in a world-class retail environment.
+</div>
 </div>
 
 </div>
 
-<!-- FINAL -->
+<!-- FOCUS -->
 <div class="section">
-<div class="title">Focus</div>
+<div class="label">Focus</div>
 
-<div class="card">
-I help premium brands bridge the gap between physical luxury retail and modern digital commerce — without losing the emotional value of the customer experience.
-</div>
-
+<p class="sub">
+Bridging the gap between luxury retail and modern e-commerce — without losing the emotional value of the customer experience.
+</p>
 </div>
 
 </div>
