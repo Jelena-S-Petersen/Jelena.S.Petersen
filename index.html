@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Jelena S. Petersen</title>
+
+<!-- FONT -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <style>
 body{
@@ -29,6 +31,7 @@ body{
   line-height:1.05;
   margin:0;
   font-weight:600;
+  letter-spacing:-1px;
 }
 
 .highlight{
@@ -54,7 +57,25 @@ body{
   border:2px solid rgba(192,132,252,0.6);
 }
 
-/* SECTION */
+/* BUTTON */
+.btn{
+  display:inline-block;
+  margin-top:30px;
+  padding:12px 18px;
+  border-radius:999px;
+  background:linear-gradient(90deg,#c084fc,#60a5fa);
+  color:#0b0f1c;
+  text-decoration:none;
+  font-weight:600;
+  transition:0.3s;
+}
+
+.btn:hover{
+  transform:translateY(-2px);
+  opacity:0.9;
+}
+
+/* SECTIONS */
 .section{
   margin-top:110px;
 }
@@ -68,34 +89,25 @@ body{
   margin-bottom:25px;
 }
 
-/* CARD STYLE */
-  .card{
-  backdrop-filter: blur(10px);
+/* CARDS */
+.card{
+  margin-bottom:40px;
+  padding:22px;
+  border-left:2px solid rgba(192,132,252,0.4);
   background: rgba(17, 24, 39, 0.6);
-  border: 1px solid rgba(255,255,255,0.06);
-  transition: transform 0.3s ease, border 0.3s ease;
+  border-radius:10px;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+  border:1px solid rgba(255,255,255,0.05);
 }
 
 .card:hover{
-  transform: translateY(-4px);
-  border: 1px solid rgba(192,132,252,0.5);
-}
-
-.btn:hover{
-  transform: translateY(-2px) scale(1.02);
-  transition:0.3s ease;
-}
-
-.hero h1{
-  letter-spacing:-1px;
-}
-  margin-bottom:40px;
-  padding-left:18px;
-  border-left:2px solid rgba(192,132,252,0.4);
+  transform:translateY(-4px);
+  border:1px solid rgba(192,132,252,0.5);
 }
 
 .title{
-  font-size:22px;
+  font-size:20px;
   font-weight:600;
 }
 
@@ -106,23 +118,10 @@ body{
   max-width:750px;
 }
 
-/* BUTTON */
-.btn{
-  display:inline-block;
-  margin-top:35px;
-  padding:12px 18px;
-  border-radius:999px;
-  background:linear-gradient(90deg,#c084fc,#60a5fa);
-  color:#0b0f1c;
-  text-decoration:none;
-  font-weight:600;
-}
-
-/* ANIMATION */
+/* FADE */
 .fade{
   opacity:0;
-  transform:translateY(25px);
-  transition:all 0.9s ease;
+  transform:translateY(30px);
 }
 </style>
 </head>
@@ -141,8 +140,8 @@ body{
   </h1>
 
   <p class="sub">
-    I help global luxury brands connect physical retail with digital commerce —
-    designing seamless, high-conversion customer journeys built on experience, emotion and precision.
+    I work at the intersection of luxury retail, e-commerce and customer experience —
+    building seamless, high-impact journeys across physical and digital touchpoints.
   </p>
 
   <a href="cv.pdf" class="btn" download>Download CV</a>
@@ -154,12 +153,12 @@ body{
 
 <div class="card">
 <div class="title">Luxury Client Experience</div>
-<div class="desc">High-touch customer journeys that strengthen loyalty and brand perception in premium retail environments.</div>
+<div class="desc">High-touch customer journeys that elevate brand perception and loyalty in premium retail environments.</div>
 </div>
 
 <div class="card">
 <div class="title">E-commerce & CX Systems</div>
-<div class="desc">Supporting digital commerce operations, including Shopify workflows, QA processes and customer experience optimisation.</div>
+<div class="desc">Supporting digital commerce workflows including Shopify operations, QA and customer journey optimisation.</div>
 </div>
 
 <div class="card">
@@ -175,17 +174,17 @@ body{
 
 <div class="card">
 <div class="title">Fiskars Group</div>
-<div class="desc">Worked on global customer operations and supported Shopify migration and CX workflow improvements.</div>
+<div class="desc">Customer Experience & E-commerce — supported Shopify migration and global CX operations.</div>
 </div>
 
 <div class="card">
 <div class="title">Christian Louboutin</div>
-<div class="desc">Delivered luxury retail experience, supporting sales performance and high-end client engagement.</div>
+<div class="desc">Luxury Retail — delivered high-end client experience and supported sales performance.</div>
 </div>
 
 <div class="card">
 <div class="title">Hermès</div>
-<div class="desc">Worked with clienteling, CRM systems and luxury customer journeys in a high-end retail environment.</div>
+<div class="desc">Client Experience — worked with luxury clienteling, CRM systems and premium customer journeys.</div>
 </div>
 
 </div>
@@ -195,13 +194,14 @@ body{
 <div class="label">Focus</div>
 
 <p class="sub">
-I focus on bridging luxury retail and digital commerce — ensuring that customer experience remains consistent, emotional and high-converting across every touchpoint.
+Bridging luxury retail and modern e-commerce with a focus on emotional customer experience, conversion and brand consistency.
 </p>
 
 </div>
 
 </div>
 
+<!-- ANIMATION -->
 <script>
 const observer = new IntersectionObserver(entries=>{
   entries.forEach(entry=>{
@@ -214,11 +214,8 @@ const observer = new IntersectionObserver(entries=>{
 },{threshold:0.15});
 
 document.querySelectorAll('.fade').forEach(el=>{
-  el.style.opacity = 0;
-  el.style.transform = "translateY(30px)";
   observer.observe(el);
 });
-</script>
 </script>
 
 </body>
